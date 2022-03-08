@@ -46,7 +46,7 @@ public class ApplyToConsultationPage {
     public static void tickCheckbox() {
 //        executeJavaScript("document.getElementsByName('checkbox-atruna')[0].type='display';");
 //        Coordinates coordinates = $(byId(consentCheckbox)).getCoordinates();
-        $(byId(consentCheckbox)).click(ClickOptions.usingJavaScript().offset(1, 1));
+//        $(byId(consentCheckbox)).click(ClickOptions.usingJavaScript().offset(1, 1));
 //        click(coordinates.onScreen().getX(), coordinates.onScreen().getY());
 
     }

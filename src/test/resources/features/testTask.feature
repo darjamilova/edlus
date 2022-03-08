@@ -18,6 +18,7 @@ Feature: Test task feature
 
   Scenario Outline: Fill in application information
     Given user opens "https://edlus.lmt.lv/"
+    When user clicks on "Kas ir EDLUS" hyperlink in menu
     And user clicks apply to consultation
     And user fills in all information: <companyTitle>, <name>, <surname>, <phoneNumber>, <email>, <comment>
     Examples:
