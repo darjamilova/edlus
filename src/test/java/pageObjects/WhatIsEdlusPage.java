@@ -1,12 +1,9 @@
 package pageObjects;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import lombok.SneakyThrows;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selenide.$;
 
 public class WhatIsEdlusPage {

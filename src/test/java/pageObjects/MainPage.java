@@ -1,15 +1,15 @@
 package pageObjects;
 
-import static com.codeborne.selenide.Selectors.byXpath;
+import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class MainPage {
-    String mainText = ".//div[@class='col content']/h1";
+    private static SelenideElement mainText = $(By.xpath(".//div[@class='col content']/h1"));
 
     public boolean isMainPageDisplayed() {
-        return ($(byXpath(mainText)).isDisplayed() &&
-                $(byXpath(mainText)).text().equals("LMT elektroniskā darbalaika uzskaite – EDLUS"));
+        return mainText.isDisplayed() &&
+                mainText.text().equals("LMT elektroniskā darbalaika uzskaite – EDLUS");
     }
-
-
 }

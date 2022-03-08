@@ -1,19 +1,21 @@
 package pageObjects;
 
-import static com.codeborne.selenide.Selectors.byXpath;
+import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class NavigationMenuWidget {
-    static String functions = ".//ul[@id='menu-biznesam-1']/li[4]";
-    static String whatIsEdlus = ".//ul[@id='menu-biznesam-1']/li[2]";
+    private static SelenideElement functions = $(By.xpath(".//ul[@id='menu-biznesam-1']/li[4]"));
+    private static SelenideElement whatIsEdlus = $(By.xpath(".//ul[@id='menu-biznesam-1']/li[2]"));
 
     public static FunctionsPage clickFunctions() {
-        $(byXpath(functions)).click();
+        functions.click();
         return new FunctionsPage();
     }
 
     public static WhatIsEdlusPage clickWhatIsEdlus() {
-        $(byXpath(whatIsEdlus)).click();
+        whatIsEdlus.click();
         return new WhatIsEdlusPage();
     }
 }

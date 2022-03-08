@@ -1,17 +1,18 @@
 package pageObjects;
-import lombok.SneakyThrows;
 
-import static com.codeborne.selenide.Selectors.byXpath;
+import com.codeborne.selenide.SelenideElement;
+import lombok.SneakyThrows;
+import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CookiesWidget {
-    static String acceptAppBtn = ".//*[@class='btn lmt-btn-type-primary lmt-btn-color-black-1']";
+    private static SelenideElement acceptAppBtn = $(By.xpath(".//*[@class='btn lmt-btn-type-primary lmt-btn-color-black-1']"));
 
     @SneakyThrows
     public static void acceptAllCookies() {
         Thread.sleep(2000);
-        if ($(byXpath(acceptAppBtn)).isDisplayed()) {
-            $(byXpath(acceptAppBtn)).click();
+        if (acceptAppBtn.isDisplayed()) {
+            acceptAppBtn.click();
         }
     }
 }
