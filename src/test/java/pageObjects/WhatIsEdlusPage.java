@@ -10,7 +10,9 @@ public class WhatIsEdlusPage {
     private static SelenideElement applyBtn = $(By.id("kas-ir-edlus-pieteikties"));
 
     public static ApplyToConsultationPage clickApplyBtn() {
-        applyBtn.waitUntil(visible, 5);
+        //to-do: improve tests stability - add check that button position does not change at the moment of the click
+        applyBtn.waitUntil(visible, 5000);
+        applyBtn.waitUntil(visible, 5000);
         applyBtn.click();
         return new ApplyToConsultationPage();
     }

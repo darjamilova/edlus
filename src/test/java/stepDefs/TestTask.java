@@ -1,6 +1,7 @@
 package stepDefs;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -68,6 +69,10 @@ public class TestTask {
         enterPhoneNumber(phoneNumber);
         enterEmail(email);
         enterComment(comment);
-        tickCheckbox();
+    }
+
+    @And("close current window")
+    public void closeCurrentWindow() {
+        Selenide.closeWindow();
     }
 }

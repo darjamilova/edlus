@@ -1,5 +1,6 @@
 package pageObjects;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import lombok.SneakyThrows;
 import org.openqa.selenium.By;
@@ -10,7 +11,7 @@ public class CookiesWidget {
 
     @SneakyThrows
     public static void acceptAllCookies() {
-        Thread.sleep(2000);
+        acceptAppBtn.waitUntil(Condition.visible, 5000);
         if (acceptAppBtn.isDisplayed()) {
             acceptAppBtn.click();
         }

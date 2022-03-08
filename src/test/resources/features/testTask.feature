@@ -21,9 +21,11 @@ Feature: Test task feature
     When user clicks on "Kas ir EDLUS" hyperlink in menu
     And user clicks apply to consultation
     And user fills in all information: <companyTitle>, <name>, <surname>, <phoneNumber>, <email>, <comment>
+    And close current window
     Examples:
-      | companyTitle | name    | surname    | phoneNumber | email          | comment    |
-      | company      | my name | my surname | 123456      | me@example.com | my comment |
+      | companyTitle | name      | surname      | phoneNumber | email           | comment     |
+      | company      | my name   | my surname   | 123456      | me@example.com  | my comment  |
+      | company2     | my name 2 | my surname 2 | 123456789   | me@example2.com | my comment2 |
 
 #  to-do: submit info & check if received
 # to-do: check that invalid info cannot be submitted
